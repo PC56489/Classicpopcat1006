@@ -74,8 +74,14 @@
 <body>
 <div class="container">
     <img class="title" src="imgs/popcat.svg" alt="POPCAT">
-    <div class="cat-img" id="p">1006morning</div>
+    <div class="cat-img" id="p"></div>
 </div>
+
+<script>
+    let popCount = 150000;
+    let htmlCount = document.getElementById("p");
+    htmlCount.innerHTML = popCount;
+</script>
 
 </body>
 </html>
