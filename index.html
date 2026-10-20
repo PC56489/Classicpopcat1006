@@ -78,9 +78,16 @@
 </div>
 
 <script>
-    let popCount = 150000;
-    let htmlCount = document.getElementById("p");
-    htmlCount.innerHTML = popCount;
+    let count = 0;
+    const catCount = document.getElementById("p");
+    catCount.innerHTML = count;
+    function updateCount() {
+        count++;
+        catCount.innerHTML = count;//更新數字
+    }
+    
+    document.addEventListener("click", updateCount);//listener監聽點擊事件，點擊時執行updateCount函式
+
 </script>
 
 </body>
