@@ -84,9 +84,17 @@
     function updateCount() {
         count++;
         catCount.innerHTML = count;//更新數字
+        catCount.id = "op";//更換圖片
     }
     
-    document.addEventListener("click", updateCount);//listener監聽點擊事件，點擊時執行updateCount函式
+    const closeMouth = () => {//const->變數值固定(常數)
+        catCount.id = "p";//切回閉嘴
+    }
+
+    //document.addEventListener("click", updateCount);//listener監聽點擊事件(click按下放開一組)
+    //document.addEventListener("keyup", closeMouth);//listener監聽按鍵釋放事件
+    document.addEventListener("pointerdown", updateCount);//考慮到手機觸控(含滑鼠)，使用pointerdown事件
+    document.addEventListener("pointerup", closeMouth);//up->放開 // 可查w3school js event
 
 </script>
 
